@@ -699,17 +699,13 @@ p.lead-serif {
 /* ─────────────────────────────────────────
    KONTAKT
 ───────────────────────────────────────── */
-#kontakt { background: var(--dark-mid); padding: 130px 0; }
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 100px;
-}
+#kontakt { background: var(--dark-mid); padding: 100px 0; }
 .contact-details {
   margin-top: 3rem;
   display: flex;
   flex-direction: column;
   border-top: 1px solid rgba(184,115,58,.12);
+  max-width: 560px;
 }
 .contact-detail {
   display: flex;
@@ -724,65 +720,18 @@ p.lead-serif {
   letter-spacing: .2em;
   text-transform: uppercase;
   color: var(--copper);
-  min-width: 72px;
+  min-width: 80px;
   padding-top: 3px;
 }
 .cd-val {
-  font-size: .85rem;
+  font-size: .88rem;
   font-weight: 300;
   letter-spacing: .04em;
-  color: rgba(245,239,230,.62);
-  line-height: 1.6;
+  color: rgba(245,239,230,.65);
+  line-height: 1.65;
 }
 .cd-val a { transition: color .2s; }
 .cd-val a:hover { color: var(--copper-lt); }
-
-.contact-form-wrap { display: flex; flex-direction: column; gap: 20px; }
-.field-group { display: flex; flex-direction: column; gap: 8px; }
-.field-group label {
-  font-size: .58rem;
-  font-weight: 500;
-  letter-spacing: .2em;
-  text-transform: uppercase;
-  color: var(--copper);
-}
-.field-group input,
-.field-group textarea {
-  background: rgba(245,239,230,.04);
-  border: 1px solid rgba(184,115,58,.2);
-  padding: 14px 18px;
-  font-family: var(--sans);
-  font-size: .83rem;
-  font-weight: 300;
-  letter-spacing: .05em;
-  color: var(--cream);
-  outline: none;
-  transition: border-color .25s;
-  width: 100%;
-}
-.field-group input::placeholder,
-.field-group textarea::placeholder { color: rgba(245,239,230,.18); }
-.field-group input:focus,
-.field-group textarea:focus {
-  border-color: var(--copper-dim);
-  background: rgba(245,239,230,.06);
-}
-.field-group textarea { min-height: 130px; resize: vertical; }
-.btn-submit {
-  font-family: var(--sans);
-  font-size: .65rem;
-  font-weight: 500;
-  letter-spacing: .2em;
-  text-transform: uppercase;
-  color: var(--dark);
-  background: var(--copper);
-  border: 1px solid var(--copper);
-  padding: 17px 40px;
-  cursor: pointer;
-  transition: background .25s;
-  align-self: flex-start;
-}
-.btn-submit:hover { background: var(--copper-lt); border-color: var(--copper-lt); }
 
 /* ─────────────────────────────────────────
    FOOTER
@@ -863,7 +812,7 @@ footer {
   .nav-links.open a { font-size: .9rem; letter-spacing: .2em; }
   .hero-inner { padding: 130px 30px 80px; }
   .wrap, .wrap--narrow { padding: 0 30px; }
-  .about-grid, .yoga-grid, .contact-grid { grid-template-columns: 1fr; gap: 60px; }
+  .about-grid, .yoga-grid { grid-template-columns: 1fr; gap: 60px; }
   .yoga-grid .yoga-img-frame { order: -1; }
   .benefits-list { grid-template-columns: 1fr 1fr; }
   .signup-strip { flex-direction: column; align-items: flex-start; padding: 40px 30px; }
@@ -903,7 +852,7 @@ footer {
     <li><a href="#korzysci">Korzyści</a></li>
     <li><a href="#faq">FAQ</a></li>
     <li><a href="#grafik">Grafik</a></li>
-    <li><a href="#kontakt" class="nav-cta">Zapisz się</a></li>
+    <li><a href="#grafik" class="nav-cta">Zapisz się</a></li>
   </ul>
 
   <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false">
@@ -935,10 +884,7 @@ footer {
     <div class="about-grid">
 
       <div class="about-img-frame reveal">
-        <div class="about-img-placeholder">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#B8733A" stroke-width="1"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
-          <span>zdjęcie Anny</span>
-        </div>
+        <img src="http://www.przystanjogi.pl/wp-content/uploads/2026/05/Obraz1.png" alt="Anna – prowadząca Przystań Jogi">
       </div>
 
       <div class="about-text reveal reveal-delay-2">
@@ -999,10 +945,7 @@ footer {
       </div>
 
       <div class="yoga-img-frame reveal reveal-delay-2">
-        <div class="yoga-img-placeholder">
-          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#B8733A" stroke-width="1"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M8 12s1 3 4 3 4-3 4-3"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
-          <span>zdjęcie jogowe</span>
-        </div>
+        <img src="http://www.przystanjogi.pl/wp-content/uploads/2026/05/Obraz2.png" alt="Zajęcia jogi – rozciąganie">
       </div>
 
     </div>
@@ -1153,18 +1096,10 @@ footer {
     <div class="signup-strip reveal">
       <div class="signup-strip-text">
         <h3>Zapisz się na zajęcia</h3>
-        <p>Zeskanuj kod QR lub napisz do mnie — rezerwacja zajmuje chwilę.</p>
+        <p>Kliknij przycisk, żeby wybrać termin i zarezerwować miejsce w aplikacji.</p>
       </div>
       <div class="qr-group">
-        <div class="qr-box">
-          <div class="qr-placeholder">QR<br>zapis</div>
-          <span class="qr-label">Zeskanuj</span>
-        </div>
-        <div class="qr-box">
-          <div class="qr-placeholder">QR<br>Instagram</div>
-          <span class="qr-label">Obserwuj</span>
-        </div>
-        <a href="#kontakt" class="btn-primary" style="align-self:center;">Napisz</a>
+        <a href="https://www.instagram.com/przystanjogi" target="_blank" rel="noopener" class="btn-primary" style="align-self:center;">Zapisz się</a>
       </div>
     </div>
   </div>
@@ -1172,49 +1107,29 @@ footer {
 
 <!-- KONTAKT -->
 <section id="kontakt">
-  <div class="wrap">
-    <div class="contact-grid">
-
-      <div class="reveal">
-        <div class="section-rule"><span>Kontakt</span></div>
-        <h2 class="serif">Napisz<br><em>do mnie.</em></h2>
-        <p class="body" style="margin-top:.5rem;">Masz pytanie? Chcesz sprawdzić, czy to jest dla Ciebie? Napisz śmiało — odpowiem i pomogę dobrać termin.</p>
-        <div class="contact-details">
-          <div class="contact-detail">
-            <span class="cd-label">Miejsce</span>
-            <span class="cd-val">Wrocławski Park Biznesu<br>Bierutowska 58-59 bud. 3, Tychy<br><a href="https://maps.app.goo.gl/jCrVd5PUaUaCgwBb8" target="_blank" rel="noopener" style="color:var(--copper);font-size:.78rem;letter-spacing:.06em;">Zobacz na mapie →</a></span>
-          </div>
-          <div class="contact-detail">
-            <span class="cd-label">Email</span>
-            <span class="cd-val"><a href="#">twoj@email.pl</a></span>
-          </div>
-          <div class="contact-detail">
-            <span class="cd-label">Telefon</span>
-            <span class="cd-val"><a href="#">+48 000 000 000</a></span>
-          </div>
-          <div class="contact-detail">
-            <span class="cd-label">Instagram</span>
-            <span class="cd-val"><a href="#">@przystanjogi</a></span>
-          </div>
+  <div class="wrap--narrow">
+    <div class="reveal">
+      <div class="section-rule"><span>Kontakt</span></div>
+      <h2 class="serif">Masz pytanie?<br><em>Zadzwoń.</em></h2>
+      <p class="body" style="margin-top:.5rem; max-width:460px;">Chętnie odpowiem na wszelkie pytania — przed pierwszymi zajęciami, w sprawie grafiku lub czegokolwiek innego.</p>
+      <div class="contact-details">
+        <div class="contact-detail">
+          <span class="cd-label">Telefon</span>
+          <span class="cd-val"><a href="tel:+48000000000">+48 000 000 000</a></span>
+        </div>
+        <div class="contact-detail">
+          <span class="cd-label">Email</span>
+          <span class="cd-val"><a href="mailto:kontakt@przystanjogi.pl">kontakt@przystanjogi.pl</a></span>
+        </div>
+        <div class="contact-detail">
+          <span class="cd-label">Instagram</span>
+          <span class="cd-val"><a href="https://www.instagram.com/przystanjogi" target="_blank" rel="noopener">@przystanjogi</a></span>
+        </div>
+        <div class="contact-detail">
+          <span class="cd-label">Miejsce</span>
+          <span class="cd-val">Wrocławski Park Biznesu<br>Bierutowska 58-59 bud. 3, Tychy<br><a href="https://maps.app.goo.gl/jCrVd5PUaUaCgwBb8" target="_blank" rel="noopener" style="color:var(--copper);font-size:.78rem;">Zobacz na mapie →</a></span>
         </div>
       </div>
-
-      <form class="contact-form-wrap reveal reveal-delay-2">
-        <div class="field-group">
-          <label>Imię</label>
-          <input type="text" placeholder="Twoje imię">
-        </div>
-        <div class="field-group">
-          <label>Email</label>
-          <input type="email" placeholder="twoj@email.pl">
-        </div>
-        <div class="field-group">
-          <label>Wiadomość</label>
-          <textarea placeholder="Napisz, czego szukasz lub zadaj pytanie..."></textarea>
-        </div>
-        <button type="submit" class="btn-submit">Wyślij</button>
-      </form>
-
     </div>
   </div>
 </section>
@@ -1224,8 +1139,7 @@ footer {
   <span class="footer-logo">Przystań Jogi</span>
   <span class="footer-copy">&copy; 2025 Przystań Jogi · Anna · Tychy</span>
   <div class="footer-social">
-    <a href="#">Instagram</a>
-    <a href="#">Facebook</a>
+    <a href="https://www.instagram.com/przystanjogi" target="_blank" rel="noopener">Instagram</a>
   </div>
 </footer>
 
